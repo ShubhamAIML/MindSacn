@@ -3,7 +3,7 @@
 An AI-powered web application built with **Django** and **XGBoost** that predicts depression risk in teenagers based on their social media habits, lifestyle, and mental health indicators.
 
 ## 🔗 Live Demo
-**Try the live application**: [MindScan Live Test](https://mindscan-mental-health.onrender.com/)
+**Try the live application**: [MindScan Live Test](https://mindsacn.onrender.com/)
 
 ---
 
