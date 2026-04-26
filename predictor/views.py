@@ -43,15 +43,29 @@ def predict(request):
         return render(request, 'predictor/index.html')
     try:
         d = request.POST
+
+        age = int(float(d['age']))
+        if age < 13 or age > 19:
+            return render(request, 'predictor/index.html', {'error': 'Age must be between 13 and 19.'})
+
+        daily_sm = float(d['daily_social_media_hours'])
+        sleep    = float(d['sleep_hours'])
+        screen   = float(d['screen_time_before_sleep'])
+        academic = float(d['academic_performance'])
+        physical = float(d['physical_activity'])
+
+        if any(v < 0 for v in [daily_sm, sleep, screen, academic, physical]):
+            return render(request, 'predictor/index.html', {'error': 'Values cannot be negative.'})
+
         features = np.array([[
-            int(d['age']),
+            age,
             ENCODE['gender'][d['gender']],
-            float(d['daily_social_media_hours']),
+            daily_sm,
             ENCODE['platform_usage'][d['platform_usage']],
-            float(d['sleep_hours']),
-            float(d['screen_time_before_sleep']),
-            float(d['academic_performance']),
-            float(d['physical_activity']),
+            sleep,
+            screen,
+            academic,
+            physical,
             ENCODE['social_interaction_level'][d['social_interaction_level']],
             int(d['stress_level']),
             int(d['anxiety_level']),
@@ -63,7 +77,7 @@ def predict(request):
             label = int(model.predict(features)[0])
             prob  = int(model.predict_proba(features)[0][label] * 100)
         else:
-            label, prob = 0, 85  # demo fallback
+            label, prob = 0, 85
 
         return render(request, 'predictor/result.html', {
             'label': label,
@@ -73,4 +87,4 @@ def predict(request):
             'tips': TIPS[label],
         })
     except Exception as e:
-        return render(request, 'predictor/index.html', {'error': str(e)})
+        return render(request, 'predictor/index.html', {'error': f'Invalid input: {e}'})
