@@ -130,7 +130,7 @@ mindscan/
 
 | # | Feature | Type | Values |
 |---|---------|------|--------|
-| 1 | Age | Numeric | 10 – 25 |
+| 1 | Age | Numeric | 13 – 19 |
 | 2 | Gender | Categorical | Male / Female |
 | 3 | Daily Social Media Hours | Numeric | 0 – 24 hrs |
 | 4 | Platform Usage | Categorical | Instagram / TikTok / Both |
