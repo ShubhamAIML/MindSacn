@@ -1,0 +1,78 @@
+{% extends 'predictor/base.html' %}
+{% block title %}MindScan — About{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <div class="badge"><i class="fa-solid fa-circle-info"></i> About MindScan</div>
+  <h1>How It <span class="accent">Works</span></h1>
+  <p>An XGBoost classifier trained on 1,200 teen mental health records to predict depression risk.</p>
+</div>
+
+<div class="about-grid">
+  <div class="about-card">
+    <i class="fa-solid fa-database"></i>
+    <h3>Dataset</h3>
+    <p>1,200 teen records covering social media habits, sleep, academics, stress, anxiety, and addiction levels.</p>
+  </div>
+  <div class="about-card">
+    <i class="fa-solid fa-gears"></i>
+    <h3>Preprocessing</h3>
+    <p>Label encoding for categorical features + SMOTE oversampling to handle class imbalance (~2.6% positive cases).</p>
+  </div>
+  <div class="about-card">
+    <i class="fa-solid fa-robot"></i>
+    <h3>Model</h3>
+    <p>XGBoost — a gradient boosted tree ensemble known for speed and accuracy on tabular data.</p>
+  </div>
+  <div class="about-card">
+    <i class="fa-solid fa-tags"></i>
+    <h3>Output</h3>
+    <p><strong>0</strong> = Low Depression Risk &nbsp;|&nbsp; <strong>1</strong> = Depression Risk Detected, plus a confidence score.</p>
+  </div>
+</div>
+
+<div class="card table-card">
+  <h3><i class="fa-solid fa-list-check"></i> Input Features</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Feature</th><th>Type</th><th>Range / Values</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Age</td><td>Numeric</td><td>10 – 25</td></tr>
+        <tr><td>2</td><td>Gender</td><td>Categorical</td><td>Male / Female</td></tr>
+        <tr><td>3</td><td>Daily Social Media Hours</td><td>Numeric</td><td>0 – 24 hrs</td></tr>
+        <tr><td>4</td><td>Platform Usage</td><td>Categorical</td><td>Instagram / TikTok / Both</td></tr>
+        <tr><td>5</td><td>Sleep Hours</td><td>Numeric</td><td>0 – 12 hrs</td></tr>
+        <tr><td>6</td><td>Screen Time Before Sleep</td><td>Numeric</td><td>0 – 10 hrs</td></tr>
+        <tr><td>7</td><td>Academic Performance</td><td>Numeric</td><td>GPA 0.0 – 4.0</td></tr>
+        <tr><td>8</td><td>Physical Activity</td><td>Numeric</td><td>0 – 10 hrs/day</td></tr>
+        <tr><td>9</td><td>Social Interaction Level</td><td>Categorical</td><td>Low / Medium / High</td></tr>
+        <tr><td>10</td><td>Stress Level</td><td>Numeric</td><td>1 – 10</td></tr>
+        <tr><td>11</td><td>Anxiety Level</td><td>Numeric</td><td>1 – 10</td></tr>
+        <tr><td>12</td><td>Addiction Level</td><td>Numeric</td><td>1 – 10</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="dev-card">
+  <div class="dev-avatar"><i class="fa-solid fa-user-tie"></i></div>
+  <div class="dev-info">
+    <div class="badge"><i class="fa-solid fa-code"></i> Developer</div>
+    <h3>Shubham Kumar</h3>
+    <p>ML Engineer &amp; Full Stack Developer passionate about using AI for social good.</p>
+    <div class="dev-links">
+      <a href="https://www.linkedin.com/in/shubham-kumar-016b6816b/" target="_blank" class="dev-link linkedin">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/ShubhamAIML" target="_blank" class="dev-link github">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://portfolio-mxx7.onrender.com/" target="_blank" class="dev-link portfolio">
+        <i class="fa-solid fa-globe"></i> Portfolio
+      </a>
+    </div>
+  </div>
+</div>
+
+<a href="/" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> Go to Assessment</a>
+{% endblock %}
