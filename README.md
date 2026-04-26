@@ -85,7 +85,7 @@ mindscan/
 ├── manage.py                        # Django entry point
 ├── requirements.txt                 # Python dependencies
 ├── render.yaml                      # Render deployment config
-├── xgboost_depression_model.pkl     # ← Your trained model (add this!)
+├── xgboost_depression_model.pkl     # trained model
 │
 ├── core/                            # Django project config
 │   ├── __init__.py
