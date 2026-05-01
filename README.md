@@ -3,7 +3,7 @@
 An AI-powered web application built with **Django** and **XGBoost** that predicts depression risk in teenagers based on their social media habits, lifestyle, and mental health indicators.
 
 ## 🔗 Live Demo
-**Try the live application**: [MindScan Live Test](https://mindsacn.onrender.com/)
+**Try the live application**: [MindScan Live Test](https://mindscan-production.up.railway.app/)
 
 ---
 
@@ -16,7 +16,7 @@ An AI-powered web application built with **Django** and **XGBoost** that predict
 - [Input Features](#input-features)
 - [Prediction Output](#prediction-output)
 - [Run Locally](#run-locally)
-- [Deploy on Render](#deploy-on-render)
+- [Deploy on Railway](#deploy-on-railway)
 - [Environment Variables](#environment-variables)
 - [Feature Encoding](#feature-encoding)
 - [Developer](#developer)
@@ -62,7 +62,7 @@ The approach combines three key strategies:
 - **FontAwesome 6**: Icon library for intuitive visual indicators
 
 ### Deployment
-- **Render**: Cloud hosting platform for live application deployment
+- **Railway**: Cloud hosting platform for live application deployment
 - **Gunicorn**: WSGI HTTP Server for production deployment
 
 ### About XGBoost
@@ -122,8 +122,6 @@ mindscan/
 - 💡 **Personalized Tips** — different recommendations for each prediction
 - ⚠️ **Error Handling** — friendly error display on bad inputs
 - 📱 **Fully Responsive** — works on mobile, tablet, and desktop
-- 🚀 **Render Ready** — includes `render.yaml` and WhiteNoise for static files
-
 ---
 
 ## 📊 Input Features
