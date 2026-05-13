@@ -16,7 +16,7 @@ An AI-powered web application built with **Django** and **XGBoost** that predict
 - [Input Features](#input-features)
 - [Prediction Output](#prediction-output)
 - [Run Locally](#run-locally)
-- [Deploy on Railway](#deploy-on-railway)
+- [Deploy on Render](#deploy-on-render)
 - [Environment Variables](#environment-variables)
 - [Feature Encoding](#feature-encoding)
 - [Developer](#developer)
